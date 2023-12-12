@@ -1,5 +1,5 @@
 This repo is a simple example on how to use Lunrjs, a Full-Text search library. The search is based off of the following json data.
-<pre style="width: 50%">
+<pre style="width: 50%; word-wrap: break-word;">
 [
     {
         "title": "The Creator",
