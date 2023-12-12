@@ -1,5 +1,5 @@
 This repo is a simple example on how to use Lunrjs, a Full-Text search library. The search is based off of the following json data.
-<pre style="width: 50%; word-wrap: break-word;">
+```json
 [
     {
         "title": "The Creator",
@@ -43,6 +43,6 @@ This repo is a simple example on how to use Lunrjs, a Full-Text search library. 
     }
     
 ]
-</pre>
+```
 
 ![image](https://github.com/oiver555/Searching-with-Lunrjs/assets/69017748/c92b3570-bad0-4078-80ac-6cccad846388)
