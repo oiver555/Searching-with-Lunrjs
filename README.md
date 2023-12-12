@@ -45,4 +45,5 @@ This repo is a simple example on how to use Lunrjs, a Full-Text search library. 
 ]
 ```
 
-![image](https://github.com/oiver555/Searching-with-Lunrjs/assets/69017748/c92b3570-bad0-4078-80ac-6cccad846388)
+![image](https://github.com/oiver555/Searching-with-Lunrjs/assets/69017748/801a30f0-04d3-4bb0-8d82-24e8031adac8)
+
