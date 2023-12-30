@@ -14,16 +14,8 @@ const documents = [
         "text": "The Animatrix is a 2003 American-Japanese adult animated science-fiction anthology film produced by the Wachowskis.[2] The film compiles nine animated short films, detailing the backstory of The Matrix film series, revealing the major events of the apocalyptic war between humanity and machines which led to the creation of the Matrix in the two parts of The Second Renaissance short, in addition to providing side stories that expand the universe and tie into the film series."
     },
     {
-        "title": "The Creator",
-        "text": "The Creator is a 2023 American science fiction action film produced and directed by Gareth Edwards, who co-wrote the screenplay with Chris Weitz. It stars John David Washington, Gemma Chan, Ken Watanabe, Sturgill Simpson and Allison Janney. Set in 2070, 15 years after a nuclear detonation in Los Angeles and a war against artificial intelligence, an ex-special forces agent is recruited to hunt down and kill the \"Creator,\" who has developed a mysterious weapon with the power to end the war."
-    },
-    {
         "title": "John Wick: Chapter 2",
         "text": "John Wick: Chapter 2 is a 2017 American neo-noir action thriller film directed by Chad Stahelski and written by Derek Kolstad. The film is sequel to John Wick (2014) and the second installment in the John Wick franchise. It stars Keanu Reeves as the eponymous character, alongside Common, Laurence Fishburne, Riccardo Scamarcio, Ruby Rose, Lance Reddick, Peter Stormare, Bridget Moynahan, Franco Nero, John Leguizamo, and Ian McShane. In the film, retired hitman John Wick is forced back into his old life to fulfill a blood oath to crime lord Santino D'Antonio (Scamarcio)."
-    },
-    {
-        "title": "The Creator",
-        "text": "The Creator is a 2023 American science fiction action film produced and directed by Gareth Edwards, who co-wrote the screenplay with Chris Weitz. It stars John David Washington, Gemma Chan, Ken Watanabe, Sturgill Simpson and Allison Janney. Set in 2070, 15 years after a nuclear detonation in Los Angeles and a war against artificial intelligence, an ex-special forces agent is recruited to hunt down and kill the \"Creator,\" who has developed a mysterious weapon with the power to end the war."
     },
     {
         "title": "Good Burger",
@@ -77,6 +69,29 @@ window.addEventListener("DOMContentLoaded", () => {
             console.log(item);
             listContainer.appendChild(d)
         })
+    })
+
+    searchBtn.addEventListener("keypress", (event) => {
+
+        if (event.key === 'Enter') {
+            listContainer.innerHTML = ""
+
+            let results = index.search(userInput.value)
+            results.forEach(item => {
+                const d = document.createElement("div")
+                d.style = "display:flex; flex-direction: row;"
+                const title = document.createElement("h3")
+                const text = document.createElement("p")
+                text.style = "flex: .7; "
+                title.style = "flex:     .2; text-align:right; padding-right: 10px"
+                title.textContent = item.ref
+                text.textContent = documents.filter(docItem => docItem.title === title.textContent)[0].text
+                d.appendChild(title)
+                d.appendChild(text)
+                console.log(item);
+                listContainer.appendChild(d)
+            })
+        }
     })
 
 
